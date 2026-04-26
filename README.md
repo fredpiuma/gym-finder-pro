@@ -1,73 +1,85 @@
-# Welcome to your Lovable project
+# Arena Fitness — Landing Page
 
-## Project info
+**[Ver demo ao vivo →](https://fredpiuma.github.io/gym-finder-pro/)**
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Template de landing page para academia com múltiplas unidades. Ideal para colocar um site profissional no ar rapidamente, sem depender de WordPress ou construtores de página.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## O que é isso
 
-**Use Lovable**
+Um site pronto e configurável para redes de academias. Basta editar um único arquivo de dados (`src/data/units.ts`) para refletir as unidades, horários, planos e preços reais da academia. O restante do site se adapta automaticamente.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+**Funcionalidades incluídas:**
 
-Changes made via Lovable will be committed automatically to this repo.
+- Hero com chamada para ação
+- Seletor interativo de unidades
+- Página individual por unidade com endereço, horários e mapa incorporado
+- Cards de planos com destaque para o plano mais popular
+- Página "Quem Somos"
+- Página de contato
+- Seção de app mobile (mockup substituível)
+- Header responsivo com menu lateral
+- Dark mode pronto
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Unidades de exemplo
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+O template vem com 10 unidades fictícias de São Paulo pré-configuradas como referência:
 
-Follow these steps:
+Centro · Moema · Pinheiros · Vila Mariana · Santana · Tatuapé · Lapa · Brooklin · Perdizes · Itaim Bibi
+
+---
+
+## Como personalizar
+
+Edite `src/data/units.ts` e substitua os dados fictícios pelos dados reais:
+
+```ts
+{
+  id: "minha-unidade",
+  name: "Minha Academia Centro",
+  address: "Rua X, 100 - Centro, Cidade - UF",
+  phone: "(11) 99999-0000",
+  whatsapp: "(11) 99999-0000",
+  email: "contato@minhaacademia.com.br",
+  hours: { weekdays: "06:00 - 22:00", saturday: "08:00 - 16:00", sunday: "Fechado" },
+  mapEmbed: "URL do embed do Google Maps",
+  image: "URL da foto da unidade",
+  plans: [ /* seus planos aqui */ ]
+}
+```
+
+---
+
+## Stack
+
+| Camada | Tecnologia |
+| :--- | :--- |
+| Frontend | React 18 + TypeScript |
+| Build | Vite |
+| UI Components | shadcn/ui + Radix UI |
+| Estilização | Tailwind CSS |
+| Roteamento | React Router DOM v6 |
+
+---
+
+## Rodando localmente
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+git clone <URL_DO_REPO>
+cd <NOME_DO_PROJETO>
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Deploy
 
-**Use GitHub Codespaces**
+O projeto gera arquivos estáticos (`npm run build`), compatíveis com qualquer hospedagem: Vercel, Netlify, VPS com Nginx, etc.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+<sub>Template desenvolvido por [Frederico Castro](https://www.fredericodecastro.com.br) · [LinkedIn](https://www.linkedin.com/in/fredericodecastro/) · [contato@fredericodecastro.com.br](mailto:contato@fredericodecastro.com.br)</sub>
